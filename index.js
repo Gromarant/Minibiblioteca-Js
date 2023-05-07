@@ -69,60 +69,59 @@ const createSections = (arr) => {
 }
 createSections(sectionArr);
 
-
 const faseOne = document.querySelector('.fase-one');
 
-for (let i=0; i<books.length; i++) {
-  // createCard(books, i);
+const createItems = () => {
 
-  //Agregado de article en section one --> creación de la card
-  const card = document.createElement('article');
-  card.className = 'card';
-  faseOne.appendChild(card);
-
-  //Creación de contenido
-  const authorP = document.createElement('p');
-  const authorName = document.createTextNode(books[i].author);
-  authorP.appendChild(authorName);
-  card.appendChild(authorP);
-
-  const countryP = document.createElement('p');
-  const country = document.createTextNode(books[i].country);
-  countryP.appendChild(country);
-  card.appendChild(countryP);
-
-  const imageImg = document.createElement('img');
-  imageImg.setAttribute('src', books[i].imageLink);
-  imageImg.className = 'image';
-  card.appendChild(imageImg);
+  for (let i=0; i<books.length; i++) {
   
-  const languageP = document.createElement('p');
-  const language = document.createTextNode(books[i].language);
-  languageP.appendChild(language);
-  card.appendChild(languageP);
-
-  const pagesP = document.createElement('p');
-  const pages = document.createTextNode(books[i].pages);
-  pagesP.appendChild(pages);
-  card.appendChild(pagesP);
-
-  const linkAncor = document.createElement('a');
-  const link = document.createTextNode('Link');
-  linkAncor.setAttribute('href', books[i].link)
-  linkAncor.appendChild(link);
-  card.appendChild(linkAncor);
-
-  const titleH2 = document.createElement('h3');
-  const title = document.createTextNode(books[i].title);
-  titleH2.appendChild(title);
-  card.appendChild(titleH2);
-
-  const yearP = document.createElement('p');
-  const year = document.createTextNode(books[i].year);
-  yearP.appendChild(year);
-  card.appendChild(yearP);
+    const card = document.createElement('article');
+    card.className = 'card';
+    faseOne.appendChild(card);
+  
+    const authorP = document.createElement('p');
+    const authorName = document.createTextNode(books[i].author);
+    authorP.appendChild(authorName);
+    card.appendChild(authorP);
+  
+    const countryP = document.createElement('p');
+    const country = document.createTextNode(books[i].country);
+    countryP.appendChild(country);
+    card.appendChild(countryP);
+  
+    const imageImg = document.createElement('img');
+    imageImg.setAttribute('src', books[i].imageLink);
+    imageImg.className = 'image';
+    card.appendChild(imageImg);
+    
+    const languageP = document.createElement('p');
+    const language = document.createTextNode(books[i].language);
+    languageP.appendChild(language);
+    card.appendChild(languageP);
+  
+    const pagesP = document.createElement('p');
+    const pages = document.createTextNode(books[i].pages);
+    pagesP.appendChild(pages);
+    card.appendChild(pagesP);
+  
+    const linkAncor = document.createElement('a');
+    const link = document.createTextNode('Link');
+    linkAncor.setAttribute('href', books[i].link)
+    linkAncor.appendChild(link);
+    card.appendChild(linkAncor);
+  
+    const titleH2 = document.createElement('h3');
+    const title = document.createTextNode(books[i].title);
+    titleH2.appendChild(title);
+    card.appendChild(titleH2);
+  
+    const yearP = document.createElement('p');
+    const year = document.createTextNode(books[i].year);
+    yearP.appendChild(year);
+    card.appendChild(yearP);
+  }
 }
-
+createItems();
 // -------------------------------------------------------------------------------------- fase-two
 const faseTwo = document.querySelector('.fase-two');
 
